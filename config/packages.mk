@@ -80,6 +80,11 @@ endif
 PRODUCT_PACKAGES += \
     Launcher3Overlay
 
+# Freeform
+PRODUCT_PACKAGES += \
+    LMOFreeform \
+    LMOFreeformSidebar
+
 # Overlays
 PRODUCT_ENFORCE_RRO_EXCLUDED_OVERLAYS += vendor/halcyon/overlay/no-rro
 PRODUCT_PACKAGE_OVERLAYS += \
@@ -161,4 +166,4 @@ PRODUCT_PACKAGES += \
     TouchGestures
 
 # Include GMS If exist
-$(call inherit-product-if-exists, vendor/gms/config.mk)
+$(call inherit-product-if-exists, vendor/gms/products/gms.mk)
